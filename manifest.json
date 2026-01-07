@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Web Narrator AI",
+  "description": "An AI assistant that explains and navigates websites without hallucinating.",
+  "version": "0.1",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
